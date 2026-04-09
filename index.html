@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubinsko pranje Vetar Gotovuša | Opština Štrpce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #0f172a; color:white; overflow-x:hidden; }
+
+        header {
+            position:fixed; top:0; width:100%; display:flex; justify-content:space-between; align-items:center;
+            padding:10px 40px; background: rgba(0,0,0,0.85); backdrop-filter:blur(12px); z-index:1000;
+            border-bottom: 2px solid #22c55e;
+        }
+        .logo { display:flex; align-items:center; gap:15px; }
+        .logo img { width:60px; height:60px; border-radius:50%; object-fit: cover; border: 2px solid #22c55e; }
+        .logo h3 { font-size: 1.1rem; letter-spacing: 1px; color: #fff; font-weight: 800; }
+        
+        nav ul { display:flex; gap:20px; list-style:none; }
+        nav a { color:white; text-decoration:none; font-weight:600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: #22c55e; }
+
+        .hero {
+            height:75vh; display:flex; align-items:center; justify-content:center; text-align:center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('7.jpg') center/cover no-repeat;
+            margin-top: 60px;
+        }
+        .hero-content h1 { font-size:3.5rem; margin-bottom:15px; text-transform: uppercase; color: #fff; font-weight: 800; }
+        .hero p { font-size:1.4rem; color:#22c55e; font-weight: 700; letter-spacing: 3px; }
+
+        section { padding:80px 20px; max-width:900px; margin:auto; }
+        .section-title { text-align:center; margin-bottom:50px; font-size: 2.5rem; position: relative; padding-bottom: 15px; font-weight: 800; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 5px; background: #22c55e; border-radius: 2px; }
+
+        .item { background: #1e293b; padding: 25px; border-radius: 25px; margin-bottom: 60px; border: 1px solid #334155; }
+        .item h3 { text-align: center; margin-bottom: 25px; color: #f8fafc; font-size: 1.4rem; }
+
+        .slider { -webkit-appearance: none; width:100%; height: 12px; background: #334155; outline: none; border-radius: 10px; margin-top: 30px; }
+        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 45px; height: 45px; background: #22c55e; border: 5px solid #fff; cursor: pointer; border-radius: 50%; }
+
+        .before-after-vertical { position:relative; width:100%; border-radius:15px; overflow:hidden; line-height: 0; background: #000; min-height: 300px; }
+        .before-after-vertical img { width:100%; height: auto; display:block; }
+        .before-after-vertical .after { position:absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; }
+
+        /* MAPA STIL */
+        .map-container { width: 100%; height: 400px; border-radius: 25px; overflow: hidden; border: 2px solid #334155; margin-bottom: 40px; }
+
+        .viber-btn { display: inline-flex; align-items: center; gap: 15px; background: #7360f2; padding: 15px 40px; border-radius: 20px; color: white; text-decoration: none; font-weight: bold; margin-top: 25px; transition: 0.3s; font-size: 1.2rem; }
+        .viber-btn img { width: 35px; height: 35px; }
+
+        .call-btn { position:fixed; bottom:30px; right:30px; background:#22c55e; padding:18px 30px; border-radius:50px; cursor:pointer; font-weight:bold; z-index: 999; }
+        
+        .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.96); display:none; align-items:center; justify-content:center; z-index:2000; }
+        .popup-box { background:#0f172a; padding:50px; border-radius:30px; text-align:center; width: 90%; max-width: 420px; border: 1px solid #334155; }
+        .phone-link { display:block; margin:18px 0; padding:20px; background:#22c55e; border-radius:18px; color:white; text-decoration:none; font-weight: 800; font-size: 1.3rem; }
+
+        @media(max-width:768px){
+            header { padding: 10px 20px; }
+            .hero-content h1 { font-size: 2rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="vetar1.jpg" alt="Logo">
+        <h3>VETAR GOTOVUŠA</h3>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#hero">Početna</a></li>
+            <li><a href="#rezultati">Rezultati</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero" id="hero">
+    <div class="hero-content">
+        <h1>VRHUNSKO DUBINSKO PRANJE</h1>
+        <p>GOTOVUŠA • ŠTRPCE • OKOLINA</p>
+    </div>
+</div>
+
+<section id="rezultati">
+    <h2 class="section-title">Naši Radovi</h2>
+    
+    <div class="item">
+        <h3>Dubinsko pranje taburea</h3>
+        <div class="before-after-vertical">
+            <img src="3.jpg" alt="Pre">
+            <img src="4.jpg" class="after" id="img-tabure" style="clip-path: inset(0 50% 0 0);">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-tabure', this.value)">
+    </div>
+
+    <div class="item">
+        <h3>Uklanjanje žvrljotina</h3>
+        <div class="before-after-vertical">
+            <img src="5.jpg" alt="Pre">
+            <img src="6.jpg" class="after" id="img-zvrljotine" style="clip-path: inset(0 50% 0 0);">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-zvrljotine', this.value)">
+    </div>
+
+    <div class="item">
+        <h3>Dubinsko pranje sedišta</h3>
+        <div class="before-after-vertical">
+            <img src="s1.jpg.jpg" alt="Pre">
+            <img src="s2.jpg.jpg" class="after" id="img-sediste" style="clip-path: inset(0 50% 0 0);">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-sediste', this.value)">
+    </div>
+
+    <div class="item">
+        <h3>Pranje neba u vozilu</h3>
+        <div class="before-after-vertical">
+            <img src="7.jpg" alt="Pre">
+            <img src="8.jpg" class="after" id="img-nebo" style="clip-path: inset(0 50% 0 0);">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-nebo', this.value)">
+    </div>
+</section>
+
+<section id="lokacija">
+    <h2 class="section-title">Gde se nalazimo</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.5707767812168!2d21.071720235955613!3d42.247196024467384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135479003c20c027%3A0xc486be45657a7f45!2zRHViaW5za28gcHJhbmplICJWZXRhciI!5e1!3m2!1ssr!2s!4v1741541334007!5m2!1ssr!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<section id="kontakt" style="text-align: center; background: #111827; padding: 100px 20px;">
+    <h2 class="section-title">Zakažite Termin</h2>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <a href="tel:+381649695019" style="color: #22c55e; font-size: 2.2rem; text-decoration: none; font-weight: 800;">064 969 5019</a>
+        <a href="tel:+38345517721" style="color: #22c55e; font-size: 2.2rem; text-decoration: none; font-weight: 800;">+383 45 517 721</a>
+        
+        <a href="viber://chat?number=%2B38345517721" class="viber-btn">
+            <img src="viber.png.webp" alt="Viber">
+            PIŠI NA VIBER
+        </a>
+    </div>
+</section>
+
+<div class="call-btn" onclick="openCall()">📞 POZOVI</div>
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <img src="vetar1.jpg" style="width: 100px; height: 100px; margin-bottom: 20px; border-radius: 50%;">
+        <h3 style="margin-bottom: 25px;">Izaberite broj</h3>
+        <a href="tel:+381649695019" class="phone-link">MTS: 064 969 5019</a>
+        <a href="tel:+38345517721" class="phone-link">IPKO: +383 45 517 721</a>
+        <button onclick="closeCall()" style="background:none; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline;">Zatvori</button>
+    </div>
+</div>
+
+<script>
+    function slideV(id, val){ document.getElementById(id).style.clipPath = "inset(0 "+(100-val)+"% 0 0)"; }
+    function openCall(){ document.getElementById("popup").style.display="flex"; }
+    function closeCall(){ document.getElementById("popup").style.display="none"; }
+</script>
+
+</body>
+</html>
