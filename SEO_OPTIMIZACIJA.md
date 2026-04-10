@@ -24,6 +24,12 @@
 - ✓ sitemap.xml - Lista svih stranica
 - ✓ .htaccess - Kompresija i caching za brži sajt
 
+### 5. **Hosting i Domen**
+- ✓ GitHub Pages hosting (besplatno)
+- ✓ Domen: https://DuckFamilyTeam.github.io/Dubinsko-pranje-Vetar/
+- ✓ SSL/HTTPS automatski
+- ✓ Google Search Console verifikacija ✅
+
 ---
 
 ## 🎯 Sledeći koraci:
