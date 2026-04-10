@@ -44,55 +44,61 @@
         .hero {
             min-height: 85vh; display:flex; align-items:center; justify-content:center; text-align:center;
             background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('images/auto.jpg') center/cover no-repeat;
-            padding: 120px 20px 60px;
+            padding: 140px 20px 80px;
         }
         .hero-content { width: 100%; max-width: 800px; }
         .hero-content h1 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 800; }
         .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color:#22c55e; font-weight: 700; letter-spacing: 2px; margin-bottom: 30px; }
-        .hero-car { margin: 0 auto; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(34,197,94,0.4); }
+        .hero-car { margin: 0 auto; width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(34,197,94,0.4); }
 
         /* ZAJEDNIČKI STIL ZA SEKCIJE */
         section { padding: 80px 5%; max-width: 1100px; margin: auto; }
         .section-title { text-align:center; margin-bottom:50px; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; position: relative; padding-bottom: 15px; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: #22c55e; border-radius: 2px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: #22c55e; border-radius: 20px; }
 
         /* REZULTATI - GRID */
-        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .item { background: #1e293b; padding: 20px; border-radius: 20px; border: 1px solid #334155; }
-        .item h3 { text-align: center; margin-bottom: 20px; font-size: 1.2rem; color: #f8fafc; }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .item { background: #1e293b; padding: 20px; border-radius: 20px; border: 1px solid #334155; transition: 0.3s; }
+        .item:hover { transform: translateY(-5px); border-color: #22c55e; }
+        .item h3 { text-align: center; margin-bottom: 20px; font-size: 1.1rem; color: #f8fafc; }
 
         /* SLIDER KOMPONENTA */
         .before-after-vertical { position:relative; width:100%; border-radius:12px; overflow:hidden; aspect-ratio: 4/3; background: #000; }
         .before-after-vertical img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; }
         .slider { -webkit-appearance: none; width:100%; height: 10px; background: #334155; outline: none; border-radius: 5px; margin-top: 20px; }
-        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 35px; height: 35px; background: #22c55e; border: 4px solid #fff; cursor: pointer; border-radius: 50%; }
+        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 35px; height: 35px; background: #22c55e; border: 4px solid #fff; cursor: pointer; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
 
         /* MAPA */
-        .map-container { width: 100%; height: clamp(300px, 50vh, 450px); border-radius: 20px; overflow: hidden; border: 2px solid #334155; }
+        .map-container { width: 100%; height: clamp(300px, 50vh, 450px); border-radius: 20px; overflow: hidden; border: 2px solid #334155; margin-top: 20px; }
 
         /* KONTAKT I DUGMAD */
-        .contact-box { display: flex; flex-direction: column; align-items: center; gap: 25px; background: #111827; padding: 60px 20px; border-radius: 30px; }
+        .contact-box { display: flex; flex-direction: column; align-items: center; gap: 25px; background: #111827; padding: 60px 20px; border-radius: 30px; border: 1px solid #1e293b; }
         .phone-number { color: #22c55e; font-size: clamp(1.5rem, 6vw, 2.2rem); text-decoration: none; font-weight: 800; transition: transform 0.3s; }
         .phone-number:hover { transform: scale(1.05); }
         
         .viber-btn { display: inline-flex; align-items: center; gap: 12px; background: #7360f2; padding: 15px 35px; border-radius: 15px; color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
-        .viber-btn:hover { background: #5e4ed9; }
+        .viber-btn:hover { background: #5e4ed9; transform: translateY(-2px); }
         .viber-btn img { width: 28px; height: 28px; }
 
-        .call-btn { position:fixed; bottom:25px; right:25px; background:#22c55e; padding:15px 25px; border-radius:50px; cursor:pointer; font-weight:800; z-index: 999; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: 0.3s; }
-        .call-btn:hover { transform: translateY(-5px); }
+        .call-btn { position:fixed; bottom:25px; right:25px; background:#22c55e; color: white; padding:15px 25px; border-radius:50px; cursor:pointer; font-weight:800; z-index: 999; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4); transition: 0.3s; border: none; }
+        .call-btn:hover { transform: translateY(-5px); background: #16a34a; }
 
         /* POPUP */
-        .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; align-items:center; justify-content:center; z-index:2000; padding: 20px; }
-        .popup-box { background:#0f172a; padding:40px 20px; border-radius:25px; text-align:center; width: 100%; max-width: 400px; border: 1px solid #334155; }
+        .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); display:none; align-items:center; justify-content:center; z-index:2000; padding: 20px; }
+        .popup-box { background:#0f172a; padding:40px 20px; border-radius:25px; text-align:center; width: 100%; max-width: 400px; border: 1px solid #22c55e; }
         .phone-link { display:block; margin:15px 0; padding:18px; background:#22c55e; border-radius:15px; color:white; text-decoration:none; font-weight: 800; font-size: 1.2rem; }
+        .close-popup { background:none; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; margin-top: 15px; font-family: inherit; }
 
         /* RESPONZIVNOST */
         @media (max-width: 768px) {
             header { padding: 10px 15px; }
-            nav { display: none; } /* Sakrivamo meni na mob jer imamo fiksno Call dugme */
-            .hero { min-height: 70vh; }
+            .logo h3 { font-size: 0.9rem; }
+            nav { display: none; } 
+            .hero { min-height: 70vh; padding: 110px 15px 60px; }
             section { padding: 60px 15px; }
+            #kontakt { padding-bottom: 110px; } /* Razmak da Call dugme ne prekriva kontakt */
+            .contact-box { padding: 40px 15px; }
+            .call-btn { bottom: 15px; right: 15px; padding: 12px 20px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -167,17 +173,15 @@
     <h2 class="section-title">Gde se nalazimo</h2>
     <div class="map-container">
         <iframe 
-            src="https://googleusercontent.com/maps.google.com/5" 
-            width="100%" height="100%" style="border:0;" 
-            allowfullscreen="" loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2954.264219760799!2d21.071720!3d42.247196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDE0JzQ5LjkiTiAyMcKwMDQnMTguMiJF!5e0!3m2!1ssr!2s!4v1700000000000!5m2!1ssr!2s" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
 </section>
 
 <section id="kontakt">
     <div class="contact-box">
-        <h2 class="section-title">Zakažite Termin</h2>
+        <h2 class="section-title" style="margin-bottom: 20px;">Zakažite Termin</h2>
         <a href="tel:+381649695019" class="phone-number">064 969 5019</a>
         <a href="tel:+38345517721" class="phone-number">+383 45 517 721</a>
         
@@ -188,15 +192,15 @@
     </div>
 </section>
 
-<div class="call-btn" onclick="openCall()">📞 POZOVI</div>
+<button class="call-btn" onclick="openCall()">📞 POZOVI ODMAH</button>
 
 <div class="popup" id="popup">
     <div class="popup-box">
-        <img src="images/vetar1.jpg" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e;">
-        <h3 style="margin-bottom: 20px;">Izaberite broj</h3>
+        <img src="images/vetar1.jpg" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e; object-fit: cover;">
+        <h3 style="margin-bottom: 20px; color: white;">Izaberite broj za poziv:</h3>
         <a href="tel:+381649695019" class="phone-link">MTS: 064 969 5019</a>
         <a href="tel:+38345517721" class="phone-link">IPKO: +383 45 517 721</a>
-        <button onclick="closeCall()" style="background:none; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; margin-top: 15px;">Zatvori</button>
+        <button onclick="closeCall()" class="close-popup">Zatvori</button>
     </div>
 </div>
 
