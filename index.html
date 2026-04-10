@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Vrhunsko dubinsko pranje automobila u Gotovuši i Opštini Štrpce. Čistimo tapaciranje, sedišta, nebo u vozilu. Besplatna procena.">
+    <meta name="description" content="Vrhunsko dubinsko pranje automobila i nameštaja u Gotovuši i Opštini Štrpce. Čistimo tapaciranje, sedišta, nebo u vozilu. Besplatna procena.">
     <meta name="keywords" content="dubinsko pranje, auto pranje, Gotovuša, Štrpce, čišćenje automobila, pranje tapacirije, pranje sedišta">
     <meta name="author" content="Vetar Gotovuša">
     <meta name="theme-color" content="#0f172a">
@@ -55,6 +55,13 @@
         section { padding: 80px 5%; max-width: 1200px; margin: auto; }
         .section-title { text-align:center; margin-bottom:50px; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; position: relative; padding-bottom: 15px; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: #22c55e; border-radius: 20px; }
+
+        /* O NAMA SEKCIJA */
+        .about-container { background: #1e293b; padding: 40px; border-radius: 30px; border-left: 5px solid #22c55e; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .about-text p { margin-bottom: 15px; font-size: 1.1rem; color: #cbd5e1; }
+        .about-features { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
+        .about-features li { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #f8fafc; }
+        .about-features li span { color: #22c55e; font-size: 1.2rem; }
 
         /* REZULTATI - GRID */
         .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -114,6 +121,7 @@
     <nav>
         <ul>
             <li><a href="#hero">Početna</a></li>
+            <li><a href="#o-nama">O Nama</a></li>
             <li><a href="#rezultati">Rezultati</a></li>
             <li><a href="#lokacija">Lokacija</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
@@ -128,6 +136,23 @@
         <img src="images/auto.jpg" alt="Dubinsko pranje automobila Gotovuša" class="hero-car">
     </div>
 </div>
+
+<section id="o-nama">
+    <h2 class="section-title">O Nama</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p><strong>Dubinsko pranje Vetar</strong> nastalo je iz jednostavne ideje: pružiti vrhunsku uslugu čišćenja našim sugrađanima u <strong>Gotovuši, Štrpcu i okolini</strong>, bez kompromisa kada je kvalitet u pitanju.</p>
+            <p>Znamo da vaš automobil nije samo prevozno sredstvo, već prostor u kojem provodite mnogo vremena. Isto važi i za vaš dom. Zato koristimo isključivo profesionalne mašine i ekološka sredstva koja su bezbedna za decu i ljubimce, a nemilosrdna prema mrljama i neprijatnim mirisima.</p>
+            
+            <ul class="about-features">
+                <li><span>✅</span> Lokalna usluga (Gotovuša)</li>
+                <li><span>✅</span> Besplatna procena</li>
+                <li><span>✅</span> Profesionalna oprema</li>
+                <li><span>✅</span> Domaćinski pristup</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <section id="rezultati">
     <h2 class="section-title">Naši Radovi</h2>
@@ -174,7 +199,7 @@
     <h2 class="section-title">Gde se nalazimo</h2>
     <div class="map-container">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.474668277258!2d21.0688944116246!3d42.25143364143431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDE1JzA1LjIiTiAyMcKwMDQnMTYuNyJF!5e0!3m2!1ssr!2srs!4v1700000000000!5m2!1ssr!2srs" 
+            src="http://googleusercontent.com/maps.google.com/8" 
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
@@ -214,14 +239,13 @@
     // Funkcije za Popup
     function openCall(){ 
         document.getElementById("popup").style.display="flex"; 
-        document.body.style.overflow = "hidden"; // Onemogući skrolovanje dok je popup otvoren
+        document.body.style.overflow = "hidden";
     }
     function closeCall(){ 
         document.getElementById("popup").style.display="none"; 
         document.body.style.overflow = "auto";
     }
     
-    // Zatvaranje popupa klikom van box-a
     window.onclick = function(event) {
         let popup = document.getElementById("popup");
         if (event.target == popup) { closeCall(); }
