@@ -47,12 +47,12 @@
             padding: 140px 20px 80px;
         }
         .hero-content { width: 100%; max-width: 800px; }
-        .hero-content h1 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 800; }
+        .hero-content h1 { font-size: clamp(2.2rem, 8vw, 3.8rem); line-height: 1.1; margin-bottom: 15px; font-weight: 800; text-transform: uppercase; }
         .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color:#22c55e; font-weight: 700; letter-spacing: 2px; margin-bottom: 30px; }
-        .hero-car { margin: 0 auto; width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(34,197,94,0.4); }
+        .hero-car { margin: 0 auto; width: 100%; max-width: 550px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 3px solid rgba(34,197,94,0.4); }
 
         /* ZAJEDNIČKI STIL ZA SEKCIJE */
-        section { padding: 80px 5%; max-width: 1100px; margin: auto; }
+        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
         .section-title { text-align:center; margin-bottom:50px; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; position: relative; padding-bottom: 15px; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: #22c55e; border-radius: 20px; }
 
@@ -60,45 +60,46 @@
         .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .item { background: #1e293b; padding: 20px; border-radius: 20px; border: 1px solid #334155; transition: 0.3s; }
         .item:hover { transform: translateY(-5px); border-color: #22c55e; }
-        .item h3 { text-align: center; margin-bottom: 20px; font-size: 1.1rem; color: #f8fafc; }
+        .item h3 { text-align: center; margin-bottom: 20px; font-size: 1.1rem; color: #f8fafc; font-weight: 600; }
 
         /* SLIDER KOMPONENTA */
         .before-after-vertical { position:relative; width:100%; border-radius:12px; overflow:hidden; aspect-ratio: 4/3; background: #000; }
-        .before-after-vertical img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; }
-        .slider { -webkit-appearance: none; width:100%; height: 10px; background: #334155; outline: none; border-radius: 5px; margin-top: 20px; }
-        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 35px; height: 35px; background: #22c55e; border: 4px solid #fff; cursor: pointer; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+        .before-after-vertical img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; pointer-events: none; }
+        .slider { -webkit-appearance: none; width:100%; height: 10px; background: #334155; outline: none; border-radius: 5px; margin-top: 25px; cursor: pointer; }
+        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 35px; height: 35px; background: #22c55e; border: 4px solid #fff; cursor: pointer; border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.5); }
 
         /* MAPA */
-        .map-container { width: 100%; height: clamp(300px, 50vh, 450px); border-radius: 20px; overflow: hidden; border: 2px solid #334155; margin-top: 20px; }
+        .map-container { width: 100%; height: clamp(350px, 55vh, 500px); border-radius: 25px; overflow: hidden; border: 2px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
         /* KONTAKT I DUGMAD */
-        .contact-box { display: flex; flex-direction: column; align-items: center; gap: 25px; background: #111827; padding: 60px 20px; border-radius: 30px; border: 1px solid #1e293b; }
-        .phone-number { color: #22c55e; font-size: clamp(1.5rem, 6vw, 2.2rem); text-decoration: none; font-weight: 800; transition: transform 0.3s; }
-        .phone-number:hover { transform: scale(1.05); }
+        .contact-box { display: flex; flex-direction: column; align-items: center; gap: 25px; background: #111827; padding: 60px 20px; border-radius: 30px; border: 1px solid #1e293b; text-align: center; }
+        .phone-number { color: #22c55e; font-size: clamp(1.6rem, 7vw, 2.5rem); text-decoration: none; font-weight: 800; transition: 0.3s; }
+        .phone-number:hover { transform: scale(1.05); color: #4ade80; }
         
-        .viber-btn { display: inline-flex; align-items: center; gap: 12px; background: #7360f2; padding: 15px 35px; border-radius: 15px; color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
-        .viber-btn:hover { background: #5e4ed9; transform: translateY(-2px); }
+        .viber-btn { display: inline-flex; align-items: center; gap: 12px; background: #7360f2; padding: 18px 40px; border-radius: 15px; color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; border: none; }
+        .viber-btn:hover { background: #5e4ed9; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(115, 96, 242, 0.3); }
         .viber-btn img { width: 28px; height: 28px; }
 
-        .call-btn { position:fixed; bottom:25px; right:25px; background:#22c55e; color: white; padding:15px 25px; border-radius:50px; cursor:pointer; font-weight:800; z-index: 999; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4); transition: 0.3s; border: none; }
-        .call-btn:hover { transform: translateY(-5px); background: #16a34a; }
+        .call-btn { position:fixed; bottom:30px; right:30px; background:#22c55e; color: white; padding:18px 30px; border-radius:50px; cursor:pointer; font-weight:800; z-index: 999; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4); transition: 0.3s; border: none; font-family: inherit; font-size: 1rem; }
+        .call-btn:hover { transform: scale(1.1); background: #16a34a; }
 
         /* POPUP */
-        .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); display:none; align-items:center; justify-content:center; z-index:2000; padding: 20px; }
-        .popup-box { background:#0f172a; padding:40px 20px; border-radius:25px; text-align:center; width: 100%; max-width: 400px; border: 1px solid #22c55e; }
-        .phone-link { display:block; margin:15px 0; padding:18px; background:#22c55e; border-radius:15px; color:white; text-decoration:none; font-weight: 800; font-size: 1.2rem; }
-        .close-popup { background:none; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; margin-top: 15px; font-family: inherit; }
+        .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(2, 6, 23, 0.95); display:none; align-items:center; justify-content:center; z-index:2000; padding: 20px; }
+        .popup-box { background:#0f172a; padding:45px 25px; border-radius:25px; text-align:center; width: 100%; max-width: 400px; border: 2px solid #22c55e; box-shadow: 0 0 40px rgba(34, 197, 94, 0.2); }
+        .phone-link { display:block; margin:15px 0; padding:18px; background:#22c55e; border-radius:15px; color:white; text-decoration:none; font-weight: 800; font-size: 1.3rem; transition: 0.2s; }
+        .phone-link:active { transform: scale(0.98); }
+        .close-popup { background:none; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; margin-top: 20px; font-family: inherit; font-size: 1rem; }
 
         /* RESPONZIVNOST */
         @media (max-width: 768px) {
-            header { padding: 10px 15px; }
-            .logo h3 { font-size: 0.9rem; }
+            header { padding: 12px 20px; }
+            .logo h3 { font-size: 0.85rem; }
             nav { display: none; } 
-            .hero { min-height: 70vh; padding: 110px 15px 60px; }
-            section { padding: 60px 15px; }
-            #kontakt { padding-bottom: 110px; } /* Razmak da Call dugme ne prekriva kontakt */
-            .contact-box { padding: 40px 15px; }
-            .call-btn { bottom: 15px; right: 15px; padding: 12px 20px; font-size: 0.9rem; }
+            .hero { min-height: 75vh; padding: 120px 15px 60px; }
+            section { padding: 60px 20px; }
+            #kontakt { padding-bottom: 120px; } 
+            .contact-box { padding: 45px 15px; }
+            .call-btn { bottom: 20px; right: 20px; padding: 15px 25px; font-size: 0.9rem; width: calc(100% - 40px); left: 20px; text-align: center; }
         }
     </style>
 </head>
@@ -124,7 +125,7 @@
     <div class="hero-content">
         <h1>VRHUNSKO DUBINSKO PRANJE</h1>
         <p>GOTOVUŠA • ŠTRPCE • OKOLINA</p>
-        <img src="images/auto.jpg" alt="Dubinsko pranje automobila" class="hero-car">
+        <img src="images/auto.jpg" alt="Dubinsko pranje automobila Gotovuša" class="hero-car">
     </div>
 </div>
 
@@ -132,36 +133,36 @@
     <h2 class="section-title">Naši Radovi</h2>
     <div class="results-grid">
         <div class="item">
-            <h3>Dubinsko pranje taburea</h3>
+            <h3>Dubinsko pranje nameštaja</h3>
             <div class="before-after-vertical">
-                <img src="images/3.jpg" alt="Pre čišćenja">
+                <img src="images/3.jpg" alt="Nameštaj pre pranja">
                 <img src="images/4.jpg" class="after" id="img-tabure" style="clip-path: inset(0 50% 0 0);">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-tabure', this.value)">
         </div>
 
         <div class="item">
-            <h3>Uklanjanje žvrljotina</h3>
+            <h3>Uklanjanje teških mrlja</h3>
             <div class="before-after-vertical">
-                <img src="images/5.jpg" alt="Pre čišćenja">
+                <img src="images/5.jpg" alt="Mrlje pre čišćenja">
                 <img src="images/6.jpg" class="after" id="img-zvrljotine" style="clip-path: inset(0 50% 0 0);">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-zvrljotine', this.value)">
         </div>
 
         <div class="item">
-            <h3>Dubinsko pranje sedišta</h3>
+            <h3>Pranje auto sedišta</h3>
             <div class="before-after-vertical">
-                <img src="images/s1.jpg" alt="Prljava sedišta">
+                <img src="images/s1.jpg" alt="Auto sedište pre pranja">
                 <img src="images/s2.jpg" class="after" id="img-sediste" style="clip-path: inset(0 50% 0 0);">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-sediste', this.value)">
         </div>
 
         <div class="item">
-            <h3>Pranje neba u vozilu</h3>
+            <h3>Čišćenje neba vozila</h3>
             <div class="before-after-vertical">
-                <img src="images/7.jpg" alt="Prljavo nebo">
+                <img src="images/7.jpg" alt="Nebo automobila pre">
                 <img src="images/8.jpg" class="after" id="img-nebo" style="clip-path: inset(0 50% 0 0);">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-nebo', this.value)">
@@ -173,7 +174,7 @@
     <h2 class="section-title">Gde se nalazimo</h2>
     <div class="map-container">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2954.264219760799!2d21.071720!3d42.247196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDE0JzQ5LjkiTiAyMcKwMDQnMTguMiJF!5e0!3m2!1ssr!2s!4v1700000000000!5m2!1ssr!2s" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.474668277258!2d21.0688944116246!3d42.25143364143431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDE1JzA1LjIiTiAyMcKwMDQnMTYuNyJF!5e0!3m2!1ssr!2srs!4v1700000000000!5m2!1ssr!2srs" 
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
@@ -182,6 +183,7 @@
 <section id="kontakt">
     <div class="contact-box">
         <h2 class="section-title" style="margin-bottom: 20px;">Zakažite Termin</h2>
+        <p style="margin-bottom: 20px; color: #94a3b8;">Dostupni smo za pozive i poruke svakog dana.</p>
         <a href="tel:+381649695019" class="phone-number">064 969 5019</a>
         <a href="tel:+38345517721" class="phone-number">+383 45 517 721</a>
         
@@ -196,8 +198,8 @@
 
 <div class="popup" id="popup">
     <div class="popup-box">
-        <img src="images/vetar1.jpg" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e; object-fit: cover;">
-        <h3 style="margin-bottom: 20px; color: white;">Izaberite broj za poziv:</h3>
+        <img src="images/vetar1.jpg" style="width: 90px; height: 90px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e; object-fit: cover;">
+        <h3 style="margin-bottom: 20px; color: white;">Izaberite broj:</h3>
         <a href="tel:+381649695019" class="phone-link">MTS: 064 969 5019</a>
         <a href="tel:+38345517721" class="phone-link">IPKO: +383 45 517 721</a>
         <button onclick="closeCall()" class="close-popup">Zatvori</button>
@@ -210,8 +212,14 @@
         document.getElementById(id).style.clipPath = "inset(0 "+(100-val)+"% 0 0)"; 
     }
     // Funkcije za Popup
-    function openCall(){ document.getElementById("popup").style.display="flex"; }
-    function closeCall(){ document.getElementById("popup").style.display="none"; }
+    function openCall(){ 
+        document.getElementById("popup").style.display="flex"; 
+        document.body.style.overflow = "hidden"; // Onemogući skrolovanje dok je popup otvoren
+    }
+    function closeCall(){ 
+        document.getElementById("popup").style.display="none"; 
+        document.body.style.overflow = "auto";
+    }
     
     // Zatvaranje popupa klikom van box-a
     window.onclick = function(event) {
@@ -235,8 +243,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 42.247196,
-    "longitude": 21.071720
+    "latitude": 42.251444,
+    "longitude": 21.071306
   },
   "url": "https://DuckFamilyTeam.github.io/Dubinsko-pranje-Vetar"
 }
