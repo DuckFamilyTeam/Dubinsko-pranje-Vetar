@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Vrhunsko dubinsko pranje automobila i nameštaja u Gotovuši i Opštini Štrpce. Čistimo tapaciranje, sedišta, nebo u vozilu. Besplatna procena.">
-    <meta name="keywords" content="dubinsko pranje, auto pranje, Gotovuša, Štrpce, čišćenje automobila, pranje tapacirije, pranje sedišta">
+    <meta name="keywords" content="dubinsko pranje, auto pranje, Gotovuša, Štrpce, čišćenje automobila, pranje tapacirije, pranje sedišta, pranje nameštaja, dubinsko čišćenje">
     <meta name="author" content="Vetar Gotovuša">
     <meta name="theme-color" content="#0f172a">
     
     <link rel="icon" type="image/x-icon" href="images/vetar1.jpg">
 
     <meta property="og:type" content="business.business">
-    <meta property="og:url" content="https://DuckFamilyTeam.github.io/Dubinsko-pranje-Vetar/">
+    <meta property="og:url" content="https://dubinsko-pranje-vetar.vercel.app/">
     <meta property="og:title" content="Dubinsko pranje Vetar - Gotovuša | Vrhunsko čišćenje automobila">
     <meta property="og:description" content="Vratite svom automobilu sjaj! Vrhunsko dubinsko pranje u Gotovuši i Štrpcu. Besplatna procena.">
-    <meta property="og:image" content="https://DuckFamilyTeam.github.io/Dubinsko-pranje-Vetar/images/auto.jpg">
+    <meta property="og:image" content="https://dubinsko-pranje-vetar.vercel.app/images/auto.jpg">
 
     <title>Dubinsko pranje Vetar Gotovuša | Opština Štrpce</title>
     
@@ -64,6 +64,13 @@
         .about-features { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
         .about-features li { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #f8fafc; }
         .about-features li span { color: #22c55e; font-size: 1.2rem; }
+
+        /* SEKCIJA USLUGE (NOVO) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .service-card { background: #111827; padding: 25px; border-radius: 20px; border: 1px solid #1e293b; }
+        .service-card h3 { color: #22c55e; margin-bottom: 10px; font-size: 1.2rem; }
+        .service-card ul { list-style: none; color: #cbd5e1; font-size: 0.95rem; }
+        .service-card li { margin-bottom: 5px; }
 
         /* REZULTATI - GRID */
         .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -117,13 +124,14 @@
 
 <header>
     <div class="logo">
-        <img src="images/vetar1.jpg" alt="Logo Vetar Gotovuša">
+        <img src="images/vetar1.jpg" alt="Logotip servisa Dubinsko pranje Vetar Gotovuša">
         <h3>VETAR GOTOVUŠA</h3>
     </div>
     <nav>
         <ul>
             <li><a href="#hero">Početna</a></li>
             <li><a href="#o-nama">O Nama</a></li>
+            <li><a href="#usluge">Usluge</a></li>
             <li><a href="#rezultati">Rezultati</a></li>
             <li><a href="#lokacija">Lokacija</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
@@ -135,7 +143,7 @@
     <div class="hero-content">
         <h1>VRHUNSKO DUBINSKO PRANJE</h1>
         <p>GOTOVUŠA • ŠTRPCE • OKOLINA</p>
-        <img src="images/auto.jpg" alt="Dubinsko pranje automobila Gotovuša" class="hero-car">
+        <img src="images/auto.jpg" alt="Profesionalno dubinsko pranje unutrašnjosti automobila u Gotovuši" class="hero-car">
     </div>
 </div>
 
@@ -156,14 +164,47 @@
     </div>
 </section>
 
+<section id="usluge">
+    <h2 class="section-title">Naše Usluge</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Automobili</h3>
+            <ul>
+                <li>Dubinsko pranje sedišta</li>
+                <li>Čišćenje tapacirunga i podova</li>
+                <li>Pranje neba vozila</li>
+                <li>Detaljno usisavanje i osvežavanje</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <h3>Nameštaj</h3>
+            <ul>
+                <li>Ugaone garniture i sofe</li>
+                <li>Fotelje i taburei</li>
+                <li>Dušeci i jastuci</li>
+                <li>Trpezarijske stolice</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <h3>Ostalo</h3>
+            <ul>
+                <li>Dečija kolica i auto sedišta</li>
+                <li>Uklanjanje teških mrlja</li>
+                <li>Neutralizacija mirisa</li>
+                <li>Besplatni saveti za održavanje</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section id="rezultati">
     <h2 class="section-title">Naši Radovi</h2>
     <div class="results-grid">
         <div class="item">
             <h3>Pranje nameštaja</h3>
             <div class="before-after-vertical">
-                <img src="images/3.jpg" alt="Pre">
-                <img src="images/4.jpg" class="after" id="img-tabure" style="clip-path: inset(0 50% 0 0);">
+                <img src="images/3.jpg" alt="Prljav tabure pre dubinskog čišćenja">
+                <img src="images/4.jpg" class="after" id="img-tabure" style="clip-path: inset(0 50% 0 0);" alt="Čist tabure nakon profesionalnog dubinskog pranja">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-tabure', this.value)">
         </div>
@@ -171,8 +212,8 @@
         <div class="item">
             <h3>Teške mrlje</h3>
             <div class="before-after-vertical">
-                <img src="images/5.jpg" alt="Pre">
-                <img src="images/6.jpg" class="after" id="img-zvrljotine" style="clip-path: inset(0 50% 0 0);">
+                <img src="images/5.jpg" alt="Uporne fleke na meblu pre tretmana">
+                <img src="images/6.jpg" class="after" id="img-zvrljotine" style="clip-path: inset(0 50% 0 0);" alt="Potpuno uklonjene mrlje sa nameštaja">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-zvrljotine', this.value)">
         </div>
@@ -180,8 +221,8 @@
         <div class="item">
             <h3>Auto sedišta</h3>
             <div class="before-after-vertical">
-                <img src="images/s1.jpg" alt="Pre">
-                <img src="images/s2.jpg" class="after" id="img-sediste" style="clip-path: inset(0 50% 0 0);">
+                <img src="images/s1.jpg" alt="Auto sedište sa dubinskom prljavštinom pre pranja">
+                <img src="images/s2.jpg" class="after" id="img-sediste" style="clip-path: inset(0 50% 0 0);" alt="Osveženo i čisto auto sedište nakon pranja">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-sediste', this.value)">
         </div>
@@ -189,8 +230,8 @@
         <div class="item">
             <h3>Nebo vozila</h3>
             <div class="before-after-vertical">
-                <img src="images/7.jpg" alt="Pre">
-                <img src="images/8.jpg" class="after" id="img-nebo" style="clip-path: inset(0 50% 0 0);">
+                <img src="images/7.jpg" alt="Prljavo nebo automobila pre tretmana">
+                <img src="images/8.jpg" class="after" id="img-nebo" style="clip-path: inset(0 50% 0 0);" alt="Čisto nebo vozila bez oštećenja materijala">
             </div>
             <input type="range" min="0" max="100" value="50" class="slider" oninput="slideV('img-nebo', this.value)">
         </div>
@@ -200,7 +241,7 @@
 <section id="lokacija">
     <h2 class="section-title">Gde se nalazimo</h2>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d499.6368902431181!2d21.071181942423394!3d42.251375397988035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2srs!4v1775833914644!5m2!1sen!2srs" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11823.111666632488!2d21.00067645115206!3d42.22744158428802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354030634676643%3A0xc856627684074f76!2zR290b3Z1xaFh!5e0!3m2!1ssr!2s!4v1709564000000!5m2!1ssr!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
@@ -212,7 +253,7 @@
         <a href="tel:+38345517721" class="phone-number">+383 45 517 721</a>
         
         <a href="viber://chat?number=%2B38345517721" class="viber-btn">
-            <img src="images/viber.png" alt="Viber ikona">
+            <img src="images/viber.png" alt="Kontaktirajte Dubinsko pranje Vetar putem Vibera">
             PIŠI NA VIBER
         </a>
     </div>
@@ -222,7 +263,7 @@
 
 <div class="popup" id="popup">
     <div class="popup-box">
-        <img src="images/vetar1.jpg" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e; object-fit: cover;">
+        <img src="images/vetar1.jpg" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; border: 2px solid #22c55e; object-fit: cover;" alt="Logotip Vetar">
         <h3 style="margin-bottom: 20px; color: white;">Izaberite broj:</h3>
         <a href="tel:+381649695019" class="phone-link">MTS: 064 969 5019</a>
         <a href="tel:+38345517721" class="phone-link">IPKO: +383 45 517 721</a>
@@ -257,6 +298,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Dubinsko pranje Vetar",
+  "image": "https://dubinsko-pranje-vetar.vercel.app/images/auto.jpg",
   "telephone": "+381649695019",
   "address": {
     "@type": "PostalAddress",
@@ -264,7 +306,7 @@
     "addressRegion": "Štrpce",
     "addressCountry": "RS"
   },
-  "url": "https://DuckFamilyTeam.github.io/Dubinsko-pranje-Vetar"
+  "url": "https://dubinsko-pranje-vetar.vercel.app/"
 }
 </script>
 
